@@ -9,7 +9,9 @@ const user = require("./routes/userRoute");
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/FoodPoint")
+  .connect(
+    "mongodb+srv://dpthynair:dpthynair@cluster0.pkvlpws.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  )
   .then(() => console.log("Connected!"));
 const app = express();
 app.use(express.json());
