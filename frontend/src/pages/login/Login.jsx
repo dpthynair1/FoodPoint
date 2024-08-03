@@ -31,7 +31,7 @@ const Login = () => {
   const registerUser = async (currentUser) => {
     try {
       const response = await axios.post(
-        `https://food-delivery-app-five-gamma.vercel.app/api/user/register`,
+        `https://food-point-virid.vercel.app/api/user/register`,
         currentUser
       );
       const { user, token } = response.data;
@@ -49,7 +49,7 @@ const Login = () => {
   const loginUser = async (currentUser) => {
     try {
       const response = await axios.post(
-        `https://food-delivery-app-five-gamma.vercel.app/api/user/login`,
+        `https://food-point-virid.vercel.app/api/user/login`,
         currentUser
       );
       const { user, token } = response.data;
@@ -134,7 +134,10 @@ const Login = () => {
               />
             </div>
           )}
-          <Button variant="contained" type="submit">
+          <Button
+            variant="contained"
+            type="submit"
+          >
             {isMember ? "Login" : "Register"}
           </Button>
           {isMember && (

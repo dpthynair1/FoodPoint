@@ -15,7 +15,9 @@ const Shop = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(`https://food-delivery-app-five-gamma.vercel.app/api/dishes`);
+        const response = await axios.get(
+          `https://food-point-virid.vercel.app/api/dishes`
+        );
         console.log(response.data);
         setProduct(response.data);
         setFoodOnly(response.data.filter((item) => item.category === "food"));
@@ -46,7 +48,10 @@ const Shop = () => {
             <FoodBankIcon />
             <span>All</span>
           </div>
-          <div onClick={() => setProduct(foodOnly)} className="category-text">
+          <div
+            onClick={() => setProduct(foodOnly)}
+            className="category-text"
+          >
             <DiningSharp />
             <span>Food</span>
           </div>
